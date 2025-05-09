@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import MenuBar from "../components/MenuBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col items-center p-6`}
       >
+        <MenuBar />
         <h1 className="text-3xl font-bold mb-4">🐾 Pet Resort Tracker</h1>
         {children}
       </body>
